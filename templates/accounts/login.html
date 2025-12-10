@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="text-xl font-bold mb-4">Login</h1>
+<form method="post" class="space-y-4 max-w-sm">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded">
+    Login
+  </button>
+</form>
+{% endblock %}
